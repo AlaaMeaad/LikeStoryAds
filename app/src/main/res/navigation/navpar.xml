@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navpar"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.alaameaad.likestoryads.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_goToWebFragment2"
+            app:destination="@id/goToWebFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_notConnectionFragment"
+            app:destination="@id/notConnectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/goToWebFragment"
+        android:name="com.alaameaad.likestoryads.GoToWebFragment"
+        android:label="fragment_gotoweb"
+        tools:layout="@layout/fragment_gotoweb" />
+    <fragment
+        android:id="@+id/notConnectionFragment"
+        android:name="com.alaameaad.likestoryads.NotConnectionFragment"
+        android:label="fragment_not_connection"
+        tools:layout="@layout/fragment_not_connection" />
+</navigation>
